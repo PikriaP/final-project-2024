@@ -11,10 +11,10 @@
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
-  --first-color: #26A69A;
+  --first-color: #262ca6;
   --first-color-lighter: #ECF3F2;
-  --title-color: #11443F;
-  --text-color: #5B7B78;
+  --title-color: #111844;
+  --text-color: #5b5b7b;
   --body-color: #F5FFFE;
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -465,7 +465,7 @@ img {
   margin-top: 50px;
   font-size: 17.7px;
   font-family: 'Cormorant Garamond', serif;
-  color: white
+  color: white;
   text-align: center;
 }
 .avatar{
