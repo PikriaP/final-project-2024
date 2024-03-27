@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /*===== VARIABLES CSS =====*/
@@ -39,7 +46,8 @@
 
 /*========== BASE ==========*/
 *, ::before, ::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -92,9 +100,15 @@ img {
 .nav {
   max-width: 968px;
   height: var(--header-height);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -109,6 +123,8 @@ img {
     padding-top: 1.5rem;
     background-color: var(--first-color-lighter);
     border-radius: 1rem;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
   }
 }
@@ -148,16 +164,21 @@ img {
   left: 0;
   width: 100%;
   height: 100vh;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .islands__container {
   position: relative;
   height: 100%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 2fr .25fr;
   grid-template-columns: 2fr .25fr;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .islands__subtitle, .islands__title, .islands__description {
@@ -178,8 +199,12 @@ img {
 }
 
 .islands__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem 1.5rem;
   background-color: var(--body-color);
   color: var(--first-color);
@@ -197,12 +222,18 @@ img {
 }
 
 .islands__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-bottom: .75rem;
 }
 
 .islands__video-content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: .15rem;
   background-color: var(--body-color);
@@ -220,7 +251,9 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: var(--first-color-lighter);
   padding: 1rem .75rem;
   border-radius: 1rem;
@@ -230,6 +263,8 @@ img {
   position: absolute;
   top: -.75rem;
   right: -.75rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: .35rem;
   background-color: var(--first-color);
@@ -249,7 +284,9 @@ img {
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: .25rem .5rem;
   background-color: var(--body-color);
   border-radius: .75rem;
@@ -265,9 +302,15 @@ img {
 }
 
 .controls__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  column-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
 }
 
 /* Active controls */
@@ -284,7 +327,9 @@ img {
     margin-right: 1rem;
   }
   .controls__container {
-    column-gap: .25rem;
+    -webkit-column-gap: .25rem;
+       -moz-column-gap: .25rem;
+            column-gap: .25rem;
   }
   .islands__popup-video {
     width: 230px;
@@ -297,6 +342,8 @@ img {
     height: calc(var(--header-height) + 1.5rem);
   }
   .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .nav__item {
@@ -310,6 +357,7 @@ img {
     display: none;
   }
   .islands__container {
+    -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
   .islands__description {
@@ -317,8 +365,12 @@ img {
     margin-bottom: 2rem;
   }
   .islands__video {
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
   }
   .islands__video-icon {
@@ -336,7 +388,9 @@ img {
     border-radius: 1.25rem;
   }
   .controls__container {
-    column-gap: 1.5rem;
+    -webkit-column-gap: 1.5rem;
+       -moz-column-gap: 1.5rem;
+            column-gap: 1.5rem;
   }
   .controls__img {
     width: 45px;
@@ -377,21 +431,29 @@ img {
 }
 .LeftArrow {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 50px;
   position: absolute;
 }
 .RightArrow {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 50px;
   position: absolute;
 }
 .DotMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 40px;
 }
 .dots {
@@ -480,8 +542,9 @@ img {
 #loadmore{
   width: 120px;
   height: 50px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(151, 32, 230)), to(rgb(19, 219, 245)));
   background-image: -o-linear-gradient(left, rgb(32, 151, 230), rgb(31, 221, 255));
+  background-image: -webkit-gradient(linear, left top, right top, from(#80c2bb), to(rgb(31, 121, 255)));
+  background-image: -o-linear-gradient(left, #26A69A, rgb(31, 121, 255));
   background-image: linear-gradient(90deg, #26A69A, rgb(31, 121, 255));
   margin-top: 50px;
   font-size: 15px;
