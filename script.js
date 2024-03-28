@@ -197,7 +197,7 @@ loadMore.remove();
 });
 
 // getUsers(currentPage);
-/ burger bar -home
+// burger bar -home
 let navigation = document.getElementById("navbar");
 let burgerbar = document.getElementById("burgerBar");
 burgerbar.addEventListener("click", function () {
