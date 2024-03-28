@@ -55,6 +55,7 @@ h1, h2, ul, p {
   margin: 0;
 }
 
+
 ul {
   padding: 0;
   list-style: none;
@@ -110,7 +111,7 @@ img {
     top: -100%;
     left: 0;
     right: 0;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     padding-top: 1.5rem;
@@ -315,7 +316,7 @@ img {
 /*========== MEDIA QUERIES ==========*/
 /* For small devices */
 @media screen and (max-width: 320px) {
-  .bd-container {
+  .sliderMainBox {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -460,7 +461,7 @@ img {
   border: 2px solid rgb(24, 43, 105);
 }
 .BgImage {
-  width: 100%;
+  max-width: 100%;
   height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -480,7 +481,7 @@ img {
   background-color: #2673a6;
 }
 .wraper-team{
-  width: 85%;
+  max-width: 85%;
   margin: 0 auto;
   padding: 80px 0 80px 0;
   display: -webkit-box;
@@ -495,12 +496,12 @@ img {
           align-items: center;
 }
 .hr-team{
-  width: 320px;
+  max-width: 320px;
   height: 3px;
   background-color: white;
 }
 #post-wraper{
-  width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,7 +509,7 @@ img {
       flex-wrap: wrap;
 }
 .name-avatar-wraper{
-  width: 16.666%;
+  max-width: 16.666%;
   padding: 0 35px 0 35px;
   display: -webkit-box;
   display: -ms-flexbox;
